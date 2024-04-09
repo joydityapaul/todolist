@@ -5,7 +5,7 @@ This is a simple Todolist application built using React. It allows users to add 
 
 ## Live Demo
 
-Check out the live demo of the Stopwatch React app:
+Check out the live demo of the Todolist React app:
 
 [Live Demo](https://todolist-iota-orcin.vercel.app/)
 ## Screenshots
