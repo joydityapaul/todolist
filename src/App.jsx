@@ -4,7 +4,6 @@ import './App.css'
 function App() {
   const [todo, setTodo] = useState("");
   const [todoLists, setTodoLists] = useState([]);
-  const [toDoStatus, setToDoStatus] = useState('Mark Completed');
 
 function removeToDo(indexToRemove)
 {
@@ -40,19 +39,20 @@ function removeToDo(indexToRemove)
               removeToDo(index)
               }}><span>Delete</span></button>
             <button onClick={()=>{
-              if(toDoStatus == "Mark Completed")
+              let statusSpan = document.getElementById(`status_${index}`)
+              if(statusSpan.innerHTML == "Mark Completed")
               {
                 let toDoToStrikeOut = document.getElementById(index)
                 toDoToStrikeOut.innerHTML = '<strike>' + toDoToStrikeOut.innerHTML + '</strike>';
-                setToDoStatus("Yet to Do")
+                statusSpan.innerHTML = "Yet to Do"
               }
               else
               {
                 let toDoToRemoveStrike = document.getElementById(index)
                 toDoToRemoveStrike.innerHTML = item;
-                setToDoStatus("Mark Completed")
+                statusSpan.innerHTML = "Mark Completed"
               }
-              }}><span>{toDoStatus}</span></button>
+              }}><span id={`status_${index}`}>Mark Completed</span></button>
             </>;
           })}
         </ul>
