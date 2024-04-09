@@ -1,6 +1,6 @@
 # Todolist React App
 
-This is a simple Todolist application built using React. It allows users to add a todo, mark it complete and delete thre todo.
+This is a simple Todolist application built using React. It allows users to add a todo, mark it complete and delete the todo.
 
 
 ## Live Demo
